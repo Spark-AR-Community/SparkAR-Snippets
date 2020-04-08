@@ -11,6 +11,9 @@
 // Original script was created by Lasse Mejlvang Tvedt
 //
 
+// Project requirements:
+// a fromScript boolean value called pastDate
+// a fromScript scalar value called daysUntilEvent
 
 //
 // Spark AR Modules

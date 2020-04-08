@@ -1,4 +1,12 @@
 //
+// In this script we show how to fade out particles from
+// a emitter. 
+//
+// Original post was created by Josh Beckwith
+// URL: https://www.facebook.com/groups/SparkARcommunity/permalink/683989935346385/
+//
+
+//
 // Include modules
 //
 const Scene = require('Scene');

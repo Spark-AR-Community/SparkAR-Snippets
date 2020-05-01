@@ -18,5 +18,5 @@ const CameraInfo = require('CameraInfo')
     const devicePosition = await promiseMe.devicePosition
 */
 module.exports.devicePosition = new Promise((resolve) => {
-  CameraInfo.captureDevicePosition.monitor({fireOnInitialValue: true}).take(({newValue}) => resolve(newValue))
+  CameraInfo.captureDevicePosition.monitor({fireOnInitialValue: true}).take(1).subscribe(({newValue}) => resolve(newValue))
 })

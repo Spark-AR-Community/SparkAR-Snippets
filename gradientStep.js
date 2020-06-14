@@ -1,4 +1,4 @@
-// This is the scrip eqauliant of chaing multiple Step Gradient patches together.
+// This is the script equivalent of chaining multiple Step Gradient patches together.
 // If you are looking a easy way to do this in patches, you can use Mate Steinforth's 
 // Easy Gradient Patch: https://gumroad.com/l/yYREv
 

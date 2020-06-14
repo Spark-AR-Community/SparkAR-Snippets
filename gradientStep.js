@@ -13,7 +13,6 @@ export function gradientStep(gradient, steps = []) {
 	}
 
 	let previousStep = steps[0][0];
-
 	for(let i = 1; i < steps.length; i++) {
 		previousStep = R.mix(previousStep, steps[i][0], R.smoothStep(gradient, steps[i-1][1], steps[i][1]));
 	}

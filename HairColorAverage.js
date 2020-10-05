@@ -11,9 +11,8 @@ const Shaders = require('Shaders');
         Materials.findFirst('defaultMaterial0')
     ]);
 
-    let color;
     // Getting averge color of the hair 
-    color = Reactive.pack4(
+    const color = Reactive.pack4(
         Segmentation.hair.averageColor.red, 
         Segmentation.hair.averageColor.green, 
         Segmentation.hair.averageColor.blue, 

@@ -1,5 +1,4 @@
 const Reactive = require('Reactive');
-const Diagnostics = require('Diagnostics');
 
 /**
  * Take input numbers and output them in a different order. 
@@ -53,29 +52,6 @@ export function swizzle(value, specifier) {
         case 3: return Reactive.pack3(signal(specifier[0]), signal(specifier[1]), signal(specifier[2]));
         case 4: return Reactive.pack4(signal(specifier[0]), signal(specifier[1]), signal(specifier[2]), signal(specifier[3]));
         default: throw `Invalid swizzle specifier: '${specifier}'`;
-    }
-}
-
-/**
- * Watch signal with 'x', 'y', 'z', 'w' labels.
- * @param {*} signal Support `number`, `ScalarSignal`, `Point2DSignal`, `PointSignal`, `Point4DSignal`.
- */
-export function swizzleWatch(signal) {
-    if (typeof (signal) == 'number') {
-        Diagnostics.watch('x', signal);
-        Diagnostics.watch('y', false);
-        Diagnostics.watch('z', false);
-        Diagnostics.watch('w', false);
-    } else if (signal['pinLastValue'] != undefined) {
-        Diagnostics.watch('x', signal);
-        Diagnostics.watch('y', false);
-        Diagnostics.watch('z', false);
-        Diagnostics.watch('w', false);
-    } else {
-        Diagnostics.watch('x', signal.x);
-        Diagnostics.watch('y', signal.y);
-        Diagnostics.watch('z', signal.z);
-        Diagnostics.watch('w', signal.w);
     }
 }
 

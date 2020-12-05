@@ -10,9 +10,8 @@
 // - Click the 'Create Producer Patch' button which is below the variables
 //==============================================================================
 
-const Diagnostics = require('Diagnostics');
-const Textures = require('Textures');
 const Patches = require('Patches');
+const Textures = require('Textures');
 
 (async function() {
   const galleryTexture = await Textures.findFirst('galleryTexture0');

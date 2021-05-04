@@ -1,4 +1,9 @@
 // Script to 'tap to change' an object's material
+// To set up in Spark AR, enable 'Instructions' under project capabilties
+// Add in your scene objects and materials that will be assigned to that object
+// Then load in this script and change the names in this script to match your objects and materials
+
+
 // Rewritten for Spark AR v86+ by Balraj Bains 2021
 // Original author for pre v86 Bridget Walsh Clair :)
 

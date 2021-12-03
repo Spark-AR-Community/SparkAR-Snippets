@@ -65,7 +65,7 @@ const D = require('Diagnostics');
     // and check our output in the Console
     D.log(daysLeft);
     
-    // If you only want to return the number, bypass the daysLeft variable and change line 67 to:
+    // If you only want to return the number, bypass the daysLeft variable and change line 70 to:
     // textObject.text = days;
     textObject.text = daysLeft;
   }

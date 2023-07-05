@@ -33,7 +33,10 @@ const delay = (ms) => new Promise(resolve => Time.setTimeout(() => resolve(), ms
 //
 const sendPulse = () => {
   D.log('Pulse');
-  return Patches.inputs.setPulse('trigger', R.once());
+  return Patches.inputs.setPulse('trigger', R.once()).catch(() => {
+    // If the function fails to send the patch variable, explain what happened and how to fix the issue
+    throw new Error(`You need to add a Patch bridge variable of type "Pulse" called "trigger" to the Patch editor, learn more about those here: https://sparkar.facebook.com/ar-studio/learn/patch-editor/bridging/#sending-variables-from-the-patch-editor-to-scripts .\n\nNote: even after creating the variable, it is important you drag the script file to the patch editor for it to be accessible and the code to work`)
+  });
 }
 
 //

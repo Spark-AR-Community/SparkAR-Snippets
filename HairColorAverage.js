@@ -4,12 +4,15 @@ const Segmentation = require('Segmentation');
 const Reactive = require('Reactive');
 const Shaders = require('Shaders');
 
-// Enable async/await in JS [part 1]
+// Create an Async function to be able to use Await with promises (which is "easier to use/read")
+// Learn more about Async on this blog post by Meta Spark: https://sparkar.facebook.com/ar-studio/learn/tutorials/first-lines-of-code/
 (async function () {
-    //Find Material 
+    // Find a Material called "defaultMaterial0" or throw an error explaining what happened if it cannot be found
     const [mat] = await Promise.all([
         Materials.findFirst('defaultMaterial0')
-    ]);
+    ]).catch(() => {
+		throw new Error(`There is no material called defaultMaterial0 on your project, please create one, or modify the script to match an existing material`)
+	});
 
     // Getting averge color of the hair 
     const color = Reactive.pack4(

@@ -7,7 +7,7 @@
 // Import modules
 import Patches from 'Patches';
 // Import Typescript types
-import { BoolSignal } from 'ReactiveModule';
+import 'Reactive.BoolSignal';
 
 (async function () {
     // `await` is used to resolve the getBoolean() promise
